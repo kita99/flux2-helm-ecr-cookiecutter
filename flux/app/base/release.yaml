@@ -1,0 +1,22 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: app
+spec:
+  releaseName: mychart
+  chart:
+    spec:
+      chart: helm/
+      sourceRef:
+        kind: GitRepository
+        name: app
+        namespace: flux-system
+      version: "*"
+  interval: 10s
+  install:
+    remediation:
+      retries: 3
+  # Place default values here
+  values:
+    service:
+      type: NodePort

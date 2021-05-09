@@ -9,7 +9,7 @@ spec:
       chart: helm/
       sourceRef:
         kind: GitRepository
-        name: app
+        name: flux-system
         namespace: flux-system
       version: "*"
   interval: 10s

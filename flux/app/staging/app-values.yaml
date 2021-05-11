@@ -4,6 +4,9 @@ metadata:
   name: app
   namespace: app
 spec:
+  targetNamespace: app-staging
+  install:
+    createNamespace: true
   chart:
     spec:
       version: ">=1.0.0-alpha"

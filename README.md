@@ -1,4 +1,4 @@
-# flux2-kustomize-helm-minimal-boilerplate
+# flux2-helm-ecr-cookiecutter
 
 This example assumes a scenario with two environments: staging and production. It also assumes a single
 private aplicational Helm chart in-repository, the flux Kustomize configs are kept as simple as possible.
